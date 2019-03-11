@@ -1,0 +1,45 @@
+<div class="container custom-container-2">
+
+  <!-- Show it when there is no diario -->
+  <div class="no-data text-center" *ngIf="Diario.length == 0">
+    <p>There is no diario added yet!</p>
+    <button class="btn btn-outline-primary" routerLink="/diario-create">Add Diario</button>
+  </div>
+
+  <!-- Diario list table, it hides when there is no diario -->
+  <div *ngIf="Diario.length !== 0">
+    <br>
+    <h3 class="mb-3 text-center">Lista Mensual</h3>
+
+    <div class="col-md-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">RR</th>
+            <th scope="col">RE</th>
+            <th scope="col">Accion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let diario of Diario">
+            <td>{{diario.id}}</td>
+            <td>{{diario.fecha}}</td>
+            <td>{{diario.RR}}</td>
+            <td>{{diario.RE}}</td>
+            <td>
+            
+              <span class="btn btn-primary " routerLink="/diario-update/{{diario.id}}">Editar</span>
+
+              <span class="btn btn-primary " (click)="deleteDiario(diario.id)">Eliminar</span>
+            
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

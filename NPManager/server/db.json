@@ -1,0 +1,50 @@
+{
+  "diarios": [
+    {
+      "id": 1,
+      "fecha": "09/03/2019",
+      "RE": "15,75",
+      "RR": "8",
+      "RyV": "14,25",
+      "VyJ": "",
+      "4Q": "",
+      "GOURM": "",
+      "JyQ": "11",
+      "VERDUR": "",
+      "CALAB": "",
+      "MEDIT": "",
+      "RUCULA": "",
+      "SALMON": "",
+      "RJyN": "5,75",
+      "FIDEOS": "",
+      "NOQUIS": "",
+      "CANEL": "2",
+      "SALSA": "",
+      "CREMA": "",
+      "QRAYA": ""
+    },
+    {
+      "id": 2,
+      "fecha": "10/03/2019",
+      "RE": "16,25",
+      "RR": "8",
+      "RyV": "8,5",
+      "VyJ": "9,5",
+      "4Q": "",
+      "GOURM": "13,50",
+      "JyQ": "",
+      "VERDUR": "",
+      "CALAB": "4",
+      "MEDIT": "",
+      "RUCULA": "5,5",
+      "SALMON": "",
+      "RJyN": "",
+      "FIDEOS": "",
+      "NOQUIS": "",
+      "CANEL": "27",
+      "SALSA": "1/2 T",
+      "CREMA": "4",
+      "QRAYA": "8"
+    }
+  ]
+}
