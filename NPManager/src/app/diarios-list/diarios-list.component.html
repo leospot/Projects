@@ -1,13 +1,13 @@
 <div class="container custom-container-2">
 
   <!-- Show it when there is no diario -->
-  <div class="no-data text-center" *ngIf="Diario.length == 0">
+  <div class="no-data text-center" *ngIf="Diarios.length == 0">
     <p>There is no diario added yet!</p>
     <button class="btn btn-outline-primary" routerLink="/diario-create">Add Diario</button>
   </div>
 
   <!-- Diario list table, it hides when there is no diario -->
-  <div *ngIf="Diario.length !== 0">
+  <div *ngIf="Diarios.length !== 0">
     <br>
     <h3 class="mb-3 text-center">Lista Mensual</h3>
 
@@ -23,17 +23,25 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let diario of Diario">
+          <tr *ngFor="let diario of Diarios">
             <td>{{diario.id}}</td>
             <td>{{diario.fecha}}</td>
             <td>{{diario.RR}}</td>
-            <td>{{diario.RE}}</td>
-            <td>
+            <td class="celda-centrada">{{diario.RE}}</td>
+            <td class="celdas-botones">
             
               <span class="btn btn-primary " routerLink="/diario-update/{{diario.id}}">Editar</span>
 
               <span class="btn btn-primary " (click)="deleteDiario(diario.id)">Eliminar</span>
             
+            </td>
+          </tr>
+          <tr>
+            <td class="celda-derecha" colspan="3">
+              Totales: 
+            </td>
+            <td class="celda-derecha">
+              {{totalizado}}
             </td>
           </tr>
         </tbody>

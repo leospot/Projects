@@ -9,7 +9,8 @@ import { RestApiService } from '../shared/rest-api.service';
 export class DiariosListComponent implements OnInit {
 
   Diarios: any = [];
-
+  totalizado : number;
+  
   constructor(
     public restApi: RestApiService
   ) { }
@@ -21,7 +22,8 @@ export class DiariosListComponent implements OnInit {
   // Get diarios list
   loadDiarios() {
     return this.restApi.getDiarios().subscribe((data: {}) => {
-      this.Diarios = data;
+      this.Diarios = data;    
+      this.totalizado = this.getTotales(data);
     });
   }
 
@@ -32,5 +34,14 @@ export class DiariosListComponent implements OnInit {
         this.loadDiarios();
       });
     }
+  }
+
+  getTotales(data)
+  {
+      let totales = 0;
+      data.forEach(element => {
+        totales += element.RE;
+      });
+      return totales;
   }
 }

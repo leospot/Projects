@@ -1,0 +1,16 @@
+
+.celdas-botones {
+    display: flex;
+    justify-content: space-around;
+}
+.celda-centrada {
+        text-align: center;
+}
+
+.celda-derecha {
+    text-align: right;
+}
+
+.celda-oculta {
+    border-color: white;
+}
