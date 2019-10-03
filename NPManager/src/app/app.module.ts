@@ -15,6 +15,8 @@ import { DiarioCreateComponent } from './diario-create/diario-create.component';
 import { DiarioDetailsComponent } from './diario-details/diario-details.component';
 import { DiarioUpdateComponent } from './diario-update/diario-update.component';
 import { DiariosListComponent } from './diarios-list/diarios-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 
 
@@ -30,7 +32,9 @@ import { DiariosListComponent } from './diarios-list/diarios-list.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

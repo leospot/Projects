@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RestApiService } from '../shared/rest-api.service';
 
+
 @Component({
   selector: 'app-diarios-list',
   templateUrl: './diarios-list.component.html',
@@ -10,6 +11,10 @@ export class DiariosListComponent implements OnInit {
 
   Diarios: any = [];
   totalizado : number;
+
+  displayedColumns: string[] = ['RR', 'RE', 'fecha', 'RyV'];
+  dataSource: any =[];
+  
   
   constructor(
     public restApi: RestApiService
@@ -23,7 +28,9 @@ export class DiariosListComponent implements OnInit {
   loadDiarios() {
     return this.restApi.getDiarios().subscribe((data: {}) => {
       this.Diarios = data;    
+      this.dataSource = data;
       this.totalizado = this.getTotales(data);
+      
     });
   }
 
